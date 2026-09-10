@@ -1,0 +1,6 @@
+spec_cd,item_cd_2014,desc_2014,unit_2014,item_cd_2024,desc_2024,unit_2024,why
+0100,6001,PREPARING ROW,AC,7001,PREPARING ROW,AC,Identical description and unit.
+0100,6002,PREPARING ROW,STA,7002,PREPARING ROW,STA,Identical description. Same item as 6001 but a different unit (STA vs AC).
+0100,6015,PREPARING ROW (HAND CLEARING),AC,7011,PREP ROW (HAND CLEARING),AC,Same work; 2024 shortened PREPARING to PREP. Not a 6→7 digit swap (6015 ↛ 7015).
+0247,6081,FL BS (CMP IN PLC)(TY A GR 1-2),TON,7001,FL BS (CMP IN PLC)(TY A GR 1-2),TON,Identical description and unit.
+0105,6002,"REMOVING STAB BASE AND ASPH PAV (2"")",SY,7022,"RMV (2"") TRT/UNTRT BASE & ASPH PAV",SY,"Same work, same unit (SY). 2024 reworded the description. Digit-swap would have produced 7002, which is a different thickness range."
