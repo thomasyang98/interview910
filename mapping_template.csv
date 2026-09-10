@@ -1,6 +1,6 @@
 spec_cd,item_cd_2014,desc_2014,unit,spec_cd_2024,item_cd_2024,desc_2024,confidence,notes
-0100,6001,PREPARING ROW,AC,,,,,
-0100,6002,PREPARING ROW,STA,,,,,
+0100,6001,PREPARING ROW,AC,0100,7001,PREPARING ROW,High,Exact match in all three columns other than ITEM_CD
+0100,6002,PREPARING ROW,STA,0100,7002,PREPARING ROW,High,Exact match in all three columns other than ITEM_CD
 0100,6003,"PREPARING ROW(TREE)(5"" TO 12"" DIA)",EA,,,,,
 0100,6004,"PREPARING ROW(TREE)(12"" TO 24"" DIA)",EA,,,,,
 0100,6005,"PREP ROW (TREE)(24""-30""DIA)",EA,,,,,
@@ -53,15 +53,15 @@ spec_cd,item_cd_2014,desc_2014,unit,spec_cd_2024,item_cd_2024,desc_2024,confiden
 0105,6006,"REMOVING STAB BASE AND ASPH PAV (3"")",CY,,,,,
 0105,6014,"REMOVING STAB BASE & ASPH PAV (7""-12"")",SY,,,,,
 0105,6031,"REMOVING STAB BASE AND ASPH PAV (12"")",STA,,,,,
-0105,6037,"REMOVING STAB BASE AND ASPH PAV(0""-16"")",SY,,,,,
-0247,6001,FL BS (CMP IN PLACE)(TYA GR1-2)(IN VEH),CY,,,,,
-0247,6003,FL BS (CMP IN PLACE)(TY A GR 3)(IN VEH),CY,,,,,
-0247,6005,FL BS (CMP IN PLACE)(TYB GR1-2)(IN VEH),CY,,,,,
-0247,6007,FL BS (CMP IN PLACE)(TY B GR 3)(IN VEH),CY,,,,,
-0247,6081,FL BS (CMP IN PLC)(TY A GR 1-2),TON,,,,,
-0247,6083,FL BS (CMP IN PLC)(TY A GR 3),TON,,,,,
-0247,6084,FL BS (CMP IN PLC)(TY A GR 4),TON,,,,,
-0247,6085,FL BS (CMP IN PLC)(TY B GR 1-2),TON,,,,,
-0247,6087,FL BS (CMP IN PLC)(TY B GR 3),TON,,,,,
-0247,6088,FL BS (CMP IN PLC)(TY B GR 4),TON,,,,,
-0247,6091,FL BS (CMP IN PLC)(TY C GR 3),TON,,,,,
+0105,6037,"REMOVING STAB BASE AND ASPH PAV(0""-16"")",SY,0105,7129,"REMOVING STAB BASE AND ASPH PAV(0""-16"")",High,Exact match in all three columns other than ITEM_CD
+0247,6001,FL BS (CMP IN PLACE)(TYA GR1-2)(IN VEH),CY,0247,7136,FL BS (CMP IN PLACE)(TYA GR1-2)(IN VEH),High,Exact match in all three columns other than ITEM_CD
+0247,6003,FL BS (CMP IN PLACE)(TY A GR 3)(IN VEH),CY,0247,7137,FL BS (CMP IN PLACE)(TY A GR 3)(IN VEH),High,Exact match in all three columns other than ITEM_CD
+0247,6005,FL BS (CMP IN PLACE)(TYB GR1-2)(IN VEH),CY,0247,7140,FL BS (CMP IN PLACE)(TYB GR1-2)(IN VEH),High,Exact match in all three columns other than ITEM_CD
+0247,6007,FL BS (CMP IN PLACE)(TY B GR 3)(IN VEH),CY,0247,7141,FL BS (CMP IN PLACE)(TY B GR 3)(IN VEH),High,Exact match in all three columns other than ITEM_CD
+0247,6081,FL BS (CMP IN PLC)(TY A GR 1-2),TON,0247,7001,FL BS (CMP IN PLC)(TY A GR 1-2),High,Exact match in all three columns other than ITEM_CD
+0247,6083,FL BS (CMP IN PLC)(TY A GR 3),TON,0247,7002,FL BS (CMP IN PLC)(TY A GR 3),High,Exact match in all three columns other than ITEM_CD
+0247,6084,FL BS (CMP IN PLC)(TY A GR 4),TON,0247,7003,FL BS (CMP IN PLC)(TY A GR 4),High,Exact match in all three columns other than ITEM_CD
+0247,6085,FL BS (CMP IN PLC)(TY B GR 1-2),TON,0247,7005,FL BS (CMP IN PLC)(TY B GR 1-2),High,Exact match in all three columns other than ITEM_CD
+0247,6087,FL BS (CMP IN PLC)(TY B GR 3),TON,0247,7006,FL BS (CMP IN PLC)(TY B GR 3),High,Exact match in all three columns other than ITEM_CD
+0247,6088,FL BS (CMP IN PLC)(TY B GR 4),TON,0247,7007,FL BS (CMP IN PLC)(TY B GR 4),High,Exact match in all three columns other than ITEM_CD
+0247,6091,FL BS (CMP IN PLC)(TY C GR 3),TON,0247,7010,FL BS (CMP IN PLC)(TY C GR 3),High,Exact match in all three columns other than ITEM_CD
