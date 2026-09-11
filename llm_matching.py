@@ -233,6 +233,32 @@ def apply_llm_matches(rows: list) -> int:
     return matched_count
 
 
+def apply_llm_na_judgments(rows: list) -> int:
+    """Write explicit LLM "N/A" judgments (no convincing candidate found)
+    into mapping_template.csv as spec_cd_2024/item_cd_2024/desc_2024 = "N/A",
+    confidence suffixed "-LLM". Notes are intentionally left blank. This is
+    distinct from apply_llm_matches -- it records "the LLM concluded there is
+    no match" rather than leaving the row silently open."""
+    template = load_mapping_template()
+
+    resolved_count = 0
+    for r in rows:
+        if r.get("status") != "judged" or r["item_cd_2024"] != "N/A":
+            continue
+
+        mask = (
+            (template["spec_cd"] == r["spec_cd"])
+            & (template["item_cd_2014"] == r["item_cd_2014"])
+            & (template["spec_cd_2024"] == "")
+        )
+        template.loc[mask, ["spec_cd_2024", "item_cd_2024", "desc_2024"]] = "N/A"
+        template.loc[mask, "confidence"] = f"{r['confidence']}-LLM"
+        resolved_count += int(mask.sum())
+
+    template.to_csv("mapping_template.csv", index=False)
+    return resolved_count
+
+
 def main() -> None:
     api_key = os.environ.get("OPENROUTER_API_KEY")
     if not api_key:
@@ -253,13 +279,15 @@ def main() -> None:
     out.to_csv("llm_judge_results.csv", index=False)
 
     applied_count = apply_llm_matches(rows)
+    na_count = apply_llm_na_judgments(rows)
 
     print(f"\ntotal records:        {len(out)}")
     print(out["status"].value_counts().to_string())
     if "judged" in out["status"].values:
         judged = out[out["status"] == "judged"]
         print(judged["confidence"].value_counts().to_string())
-    print(f"applied to mapping_template.csv: {applied_count}")
+    print(f"matches applied to mapping_template.csv:    {applied_count}")
+    print(f"N/A judgments applied to mapping_template.csv: {na_count}")
     print("written to llm_judge_results.csv and mapping_template.csv")
 
 
