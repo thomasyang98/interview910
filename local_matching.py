@@ -1,5 +1,11 @@
-"""Join bid_code_2014.csv and bid_code_2024.csv on SPEC_CD, DESCRIPTION, UNIT,
-and record the exact matches into mapping_template.csv."""
+"""Local-algorithm component of the bid code mapping workflow: rule-based,
+deterministic matching between bid_code_2014.csv and bid_code_2024.csv.
+
+Applies four steps in order, each only touching rows still unmatched in
+mapping_template.csv: exact match on SPEC_CD+DESCRIPTION+UNIT, no-pair
+detection, non-numeric high text similarity, and numeric-mandate one-to-one
+matching. See llm_matching.py for the semantic-judgment component that
+handles whatever remains after this."""
 
 import difflib
 import re
